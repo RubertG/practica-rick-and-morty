@@ -1,0 +1,195 @@
+$primary: rgb(2, 14, 22);
+$text-white: rgba(255, 255, 255, 0.993);
+$bg-light-transparent: rgba(255, 255, 255, 0.11);
+$green: #93c572;
+$yellow: rgb(247, 243, 102);
+$ligth-blue: rgb(157, 216, 209);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: $primary;
+}
+
+h1 {
+    color: $text-white;
+    font-size: 2.4rem;
+    font-weight: 500;
+    text-align: center;
+
+    span {
+        display: block;
+        width: 95%;
+        height: 3px;
+        margin: auto;
+        margin-top: 7px;
+        border-radius: 5px;
+        background-color: $green;
+        animation: animation_span_title 1s ease;
+    }
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 40px auto;
+}
+
+.container-spinner {
+    width: 160px;
+    background-color: $bg-light-transparent;
+    color: $text-white;
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+
+    .spinner {
+        border: 3px solid rgba(255, 255, 255, 0.13);
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border-left-color: $text-white;
+        animation: spin 1s linear infinite;
+    }
+}
+
+.container-cards {
+    width: 95%;
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    color: $text-white;
+
+    .card {
+        width: 20%;
+        min-width: 230px;
+        max-width: 400px;
+        height: 18.75rem;
+        background-color: $bg-light-transparent;
+        backdrop-filter: blur(7px);
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.068);
+        box-shadow: 0px 0px 10px $bg-light-transparent;
+        overflow: hidden;
+        transition: .4s all;
+        
+        img {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: -5px;
+            height: 30%;
+            justify-content: center;
+
+            h2 {
+                font-size: 1.2rem;
+                text-align: center;
+            }
+
+            p {
+                font-size: 1rem;
+                margin-top: 5px;
+            }
+        }
+    }
+
+    .card:hover {
+        transform: translateY(-2px);
+    }
+}
+
+.ocultar {
+    display: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes mov_caja_1 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(10px, -30px) rotate(10deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0);
+    }
+}
+
+@keyframes mov_caja_2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(20px, 30px) rotate(40deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0);
+    }
+}
+
+@keyframes mov_caja_3 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-15px, 30px) rotate(-10deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0);
+    }
+}
+
+@keyframes animation_span_title {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 95%;
+    }
+}
+
+@media (max-width: 645px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 430px) {
+    html {
+        font-size: .8rem;
+    }
+}

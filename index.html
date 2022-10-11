@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"/>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"/>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"/>
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"/>
+    <link
+      rel="stylesheet"
+      href="css/estilos.css"/>
+    <title>Practica Rick and Morty con Fetch API</title>
+</head>
+<body>
+    <main class="container">
+        <h1>Personajes de Rick and Morty <span></span></h1>
+        <!-- spinner cargando -->
+        <section class="container-spinner ocultar">
+            <p>Cargando...</p>
+            <div class="spinner"></div>
+        </section>
+        <section class="container-cards" id="card-dinamicas">
+        </section>
+    </main>
+    
+    <template id="template-card">
+        <article class="card">
+            <img src="https://media.vogue.es/photos/5cc754b215d9a34b70e83aec/master/pass/rick_y_morty_9442.jpg" alt="..." class="card-img"/>
+            <div class="card-body">
+                <h2>Rick</h2>
+                <p>Human</p>
+            </div>
+        </article>
+    </template>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
