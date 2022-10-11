@@ -219,8 +219,8 @@ h1 span {
     font-size: 1.7rem;
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 455px) {
   h1 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 }/*# sourceMappingURL=estilos.css.map */
