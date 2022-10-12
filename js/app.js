@@ -30,7 +30,11 @@ const pintarCard = data => {
     data.results.forEach(element => {
         const clone = templateCard.cloneNode(true)
         clone.querySelector('h2').textContent = element.name
-        clone.querySelector('p').textContent = element.species
+        clone.querySelector('#tipo').textContent = element.species
+        clone.querySelector('#estado').textContent = element.status
+        clone.querySelector('#genero').textContent = element.gender
+        clone.querySelector('#origen').textContent = element.origin['name']
+        clone.querySelector('#localidad').textContent = element.location['name']
         clone.querySelector('.card-img').setAttribute('src', element.image)
         fragment.appendChild(clone)
     });

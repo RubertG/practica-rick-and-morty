@@ -19,7 +19,7 @@ h1 {
 }
 h1 span {
   display: block;
-  width: 95%;
+  width: 90%;
   height: 3px;
   margin: auto;
   margin-top: 7px;
@@ -68,8 +68,9 @@ h1 span {
   color: rgba(255, 255, 255, 0.993);
 }
 .container-cards .card {
+  position: relative;
   width: 20%;
-  min-width: 230px;
+  min-width: 250px;
   max-width: 400px;
   height: 18.75rem;
   min-height: 350px;
@@ -84,25 +85,63 @@ h1 span {
 }
 .container-cards .card img {
   width: 100%;
-  height: 75%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 0;
 }
 .container-cards .card .card-body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -5px;
-  height: 25%;
-  justify-content: center;
+  padding: 0 5px;
+  padding-top: 13px;
+  justify-content: flex-start;
+  transition: 0.4s all ease;
+  border-radius: 0;
 }
 .container-cards .card .card-body h2 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  padding-top: 5px;
   text-align: center;
 }
+.container-cards .card .card-body hr {
+  margin: 10px 0;
+}
+.container-cards .card .card-body .card-body-datos {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  margin-top: 15px;
+  align-items: center;
+  justify-content: center;
+}
 .container-cards .card .card-body p {
-  font-size: 1rem;
+  font-size: 1.05rem;
+  text-align: center;
   margin-top: 5px;
+}
+.container-cards .card:hover .card-body {
+  background-color: rgba(2, 14, 22, 0.9);
+  transform: translateY(-101.2%);
+}
+.container-cards .card:hover .card-body hr {
+  display: block;
+  width: 90%;
+  height: 2px;
+  margin: auto;
+  margin-top: 7px;
+  border-radius: 5px;
+  background-color: #93c572;
+  -webkit-animation: animation_span_title 1s ease;
+          animation: animation_span_title 1s ease;
+  margin: 10px 0;
 }
 .container-cards .card:hover {
   transform: translateY(-2px);
@@ -340,7 +379,7 @@ h1 span {
     width: 0px;
   }
   100% {
-    width: 95%;
+    width: 90%;
   }
 }
 @keyframes animation_span_title {
@@ -348,7 +387,7 @@ h1 span {
     width: 0px;
   }
   100% {
-    width: 95%;
+    width: 90%;
   }
 }
 @media (max-width: 645px) {
